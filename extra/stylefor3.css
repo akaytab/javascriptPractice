@@ -1,0 +1,35 @@
+body{
+    background-color: bisque;
+    background-image: url(https://cdn.pixabay.com/photo/2021/09/13/22/03/code-6622549_1280.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;   
+}
+
+h1{
+    color:color-mix(in srgb, blue 25%, yellow 45%);
+    border: blue;
+    font-variant: normal;
+    padding: 20px; 
+    transition: color 0.4s ease , font-size 0.4s ease-out  ;
+    text-align: center;
+    text-shadow: thistle;
+    margin-left: 550px;
+    margin-right: 550px;
+}
+h1:hover{
+    color: blueviolet;
+    font-size: 50px;
+}
+
+p{
+    color: chocolate;
+    font-size: 20px;
+}
+
+a{
+    color:blue;
+    text-decoration: tomato;
+    font-size: 20px;
+}
