@@ -30,6 +30,26 @@ class Graphs{
         }
         delete this.adjacencyList[vertex];
     }
+
+    depthFirstRecursive(startVertex){
+        const list =[];
+        const isVisited={};
+        const adjacencyList =this.adjacencyList;
+
+        (function dfs(vertex){
+            if (!vertex) return null;
+            isVisited[vertex]=true;
+            list.push(vertex);
+
+            adjacencyList[vertex].forEach(neighbor=>{
+                if(!isVisited[neighbor]){
+                    return dfs(neighbor);
+                }
+            }) 
+        })(startVertex)
+
+        return list;
+    }
 }
 
 const g=new Graphs();
