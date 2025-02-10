@@ -50,6 +50,27 @@ class Graphs{
 
         return list;
     }
+
+    breadthFirstSearch(startvertex){
+        const list =[];
+        const isVisited={};
+        let queue =[startvertex];
+        let currentVertex
+        isVisited[startvertex]=true;
+
+        while(queue.length){
+            currentVertex=queue.shift();
+            list.push(currentVertex);
+
+            this.adjacencyList[currentVertex].forEach(relatie=>{
+                if(!isVisited[relatie]){
+                    isVisited[relatie]=true;
+                    queue.push(relatie)
+                }  
+            })
+        }
+        return list;
+    }
 }
 
 const g=new Graphs();
