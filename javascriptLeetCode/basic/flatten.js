@@ -66,3 +66,22 @@ const flattenObject =(obj,parent)=>{
     }
     return newObj
 }
+let obj={
+  name: 'Chiranjit',
+  address: {
+    personal: {
+      city: 'Kolkata',
+      state: 'West Bengal'
+    },
+    office: {
+      city: 'Bengaluru',
+      state: 'Karnataka',
+      area: {
+        landmark: 'Waterside',
+        post: 433101
+      }
+    }
+  }
+}
+
+console.log(obj);

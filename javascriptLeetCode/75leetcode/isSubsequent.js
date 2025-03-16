@@ -16,19 +16,39 @@ Output: false
 
  */
 
-var isSubsequence = function(s,t) {
-    let p1 = 0;
-    let p2 = 0;
+var isSubsequence = function(s, t) {
 
-    while (p2 < t.length) {
-        if (s[p1]<s.length && s[p1] === t[p2]) {
-            p1++;
+    let pointer1=0;
+    let pointer2=0;
+
+    for(let i=0;i<t.length;i++){
+        console.log(s[pointer1],'--->',t[i]);
+        
+        if(s[pointer1]===t[i]){
+            pointer1++;
         }
-        p2++;
     }
-
-    return p1 === s.length;
+    if(pointer1!==s.length){
+        return false;
+    }else{
+        return true;
+    }
+    
 };
 
+// var isSubsequence = function(s,t) {
+//     let p1 = 0;
+//     let p2 = 0;
+
+//     while (p2 < t.length) {
+//         if (s[p1]<s.length && s[p1] === t[p2]) {
+//             p1++;
+//         }
+//         p2++;
+//     }
+
+//     return p1 === s.length;
+// };
+
 // Highlighted line
-console.log(isSubsequence('axc','ahbgdc'));
+console.log(isSubsequence('abc','ahbgdc'));

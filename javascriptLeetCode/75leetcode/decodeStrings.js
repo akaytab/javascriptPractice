@@ -44,3 +44,6 @@ var decodeString = function(s) {
    }
    return currentString
 };
+
+
+console.log(decodeString('3[a2[c]]'))
